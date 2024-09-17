@@ -1,0 +1,537 @@
+{
+	"info": {
+		"_postman_id": "ee175ebe-0c0e-429b-b18e-10c9f0627887",
+		"name": "MCY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15046559"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register?email=hh@gmail.com&password=password&name=UU&password_confirmation=password",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "hh@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						},
+						{
+							"key": "name",
+							"value": "UU"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"superadmin@gmail.com\",\r\n    \"password\": \"password\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login?email=admin@example.com&password=password",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@example.com"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZDZhYjc2ZmE3MWFmMDQxMmRmMDA5YjNiNjdjNmNhNDU3NTY2NWVhYjZiNjAwMTYxYmFiMGE3ZTIyYWJmYjEwYWIwYWJlMmFkYTI2ZTU0ODYiLCJpYXQiOjE3MjY1ODg4OTkuMDE2Mzc1LCJuYmYiOjE3MjY1ODg4OTkuMDE2Mzc3LCJleHAiOjE3NTgxMjQ4OTguOTk4NDQ1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.WbhXg4OBm0hViXJwbSZoVZtBwWD4W2GlfFOaYn-9fe47M8il7vSRJKOx0RDbwvgA2Csu0uSTQaUj48xnrOFoSBIi6HhNto787HFcgRgqnWpjFj52iR_d3RzHZFZOcHhlH2M8_EAEuat_dKNe8Q3qKJULX-XZv0m-d5TofEyXlTuinNoJ41VquWjuaZVN18s38GraxxpE9u0n0PVsX_t7lPwQryKHFuKXT65NQIq2ukkB5iDU2r6sqPXpNISYpH4jv3pd84QCFha7yYAA7fVWq4msTbmRE5I3DSCQfa2rd1kbChQTZlowkR68yxKIsUW4tVwhjldLS1nxsHyvF9j_44SVSX0X7q8h1Q3cHQTlXRNIeFVlqx0qcJoZXC_7bsNNun8jzVuI4dyflI74i_hh_AntygKtGOYAV4eCy5v1WprqDmxWVGg3tldwLAPR9Q7fMBFASkqdnGcwgJ0R7ekwUTXPIXnxghap-Ez61t21zJhCBXYZ3mmGVEtek_V5f2q3vUrR-mmRvRgDPlXlkk8wIK_mZm50dycrW5WEwTTK9JtHTkYlFUECEam6Pe_1M4MvUhGISnBBfYre5fFs99HqBX3CyTdq6IV5DtssyHc0BJ7190jGjzufx0FOi-PeWMJoOIGF7g8oWBUrq4tmzJ5BvKUVmKzbFOKnkAwSQKlgO8Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Wallet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMWJmNGIyNGFlMzEwMzgxN2ZjMmExMWRlZGUzMTQ3MTdiZWMyZTdkYTFiOTNjZDJmYjQ0ZmU5NDkxNTdiMzM1ZTg3NDE1NTA5YzE0MDRkNWQiLCJpYXQiOjE3MjY1ODc2NjkuODExMjExLCJuYmYiOjE3MjY1ODc2NjkuODExMjE1LCJleHAiOjE3NTgxMjM2NjkuNzk0NTY3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.bvE8KPeBaHrHsZPjFEWQ58QBl6EgSFZtO1g3PNg1DD4Pa7bOC1FnNnKr4MKV-RV1v5L9ackfY6ginoFn3QRASeoC84mOojqtn1f4SFd5VulMluBzedkyTCyeD_G2b0F8a2_ESSihF-3eDR3jTuEHUx-v15PIut9oSMMoOw8al9GXjb3xXz-tvQYbYjLzkMW8yozLkoJ5ETSF_TPlP-r5q2a154LVT3V1yIHxtBXsmxpyod64FGor85oMGm5vAW7Hs5B7fjUwzoJkWBA5_RbWKZl_Io9XxlPGerMmHDvX18Xa5vt88qbU5MSieVG9XVvhl6LmzGMNJXHaUO_AK8wPwns34gkz8ckkcepfabz6cAOdxmgVushKesjaaGqJrOJhf5c8TAEsnJYj7BVYx9z7J8O3pDTmmmgZm3d4sHmUwZHSjjTz-FATpB_XXeIVN89p3R6SbQr8p7OG9RyomgG-JrzojK1XtEtEiXPVyfDks8OaHRse9thf0Fc9VbeqohmwQtczlWpmgSCyLU23Fo8I6gYZ8DqsYom124yT1x7k0brhPswiODyiaazu1azg3Y1QWgLYIQblIB30GI3E6ABhGyUISYdrIbJqUmN03DVdgP1m4n0c8A6HsEIRvNeHKwVgCv2TrqKadS2p9vat59XUT-n-XoXhH6UelEaf1ep8lms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/wallets?user_id=2&account_id=111f&type=ww&balance=7888",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"wallets"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "2"
+						},
+						{
+							"key": "account_id",
+							"value": "111f"
+						},
+						{
+							"key": "type",
+							"value": "ww"
+						},
+						{
+							"key": "balance",
+							"value": "7888"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"a@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"name\":\"SYA\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMWJmNGIyNGFlMzEwMzgxN2ZjMmExMWRlZGUzMTQ3MTdiZWMyZTdkYTFiOTNjZDJmYjQ0ZmU5NDkxNTdiMzM1ZTg3NDE1NTA5YzE0MDRkNWQiLCJpYXQiOjE3MjY1ODc2NjkuODExMjExLCJuYmYiOjE3MjY1ODc2NjkuODExMjE1LCJleHAiOjE3NTgxMjM2NjkuNzk0NTY3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.bvE8KPeBaHrHsZPjFEWQ58QBl6EgSFZtO1g3PNg1DD4Pa7bOC1FnNnKr4MKV-RV1v5L9ackfY6ginoFn3QRASeoC84mOojqtn1f4SFd5VulMluBzedkyTCyeD_G2b0F8a2_ESSihF-3eDR3jTuEHUx-v15PIut9oSMMoOw8al9GXjb3xXz-tvQYbYjLzkMW8yozLkoJ5ETSF_TPlP-r5q2a154LVT3V1yIHxtBXsmxpyod64FGor85oMGm5vAW7Hs5B7fjUwzoJkWBA5_RbWKZl_Io9XxlPGerMmHDvX18Xa5vt88qbU5MSieVG9XVvhl6LmzGMNJXHaUO_AK8wPwns34gkz8ckkcepfabz6cAOdxmgVushKesjaaGqJrOJhf5c8TAEsnJYj7BVYx9z7J8O3pDTmmmgZm3d4sHmUwZHSjjTz-FATpB_XXeIVN89p3R6SbQr8p7OG9RyomgG-JrzojK1XtEtEiXPVyfDks8OaHRse9thf0Fc9VbeqohmwQtczlWpmgSCyLU23Fo8I6gYZ8DqsYom124yT1x7k0brhPswiODyiaazu1azg3Y1QWgLYIQblIB30GI3E6ABhGyUISYdrIbJqUmN03DVdgP1m4n0c8A6HsEIRvNeHKwVgCv2TrqKadS2p9vat59XUT-n-XoXhH6UelEaf1ep8lms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/wallets/transfer?sender_wallet_id=5&receiver_wallet_id=2&amount=190",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"wallets",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "sender_wallet_id",
+							"value": "5"
+						},
+						{
+							"key": "receiver_wallet_id",
+							"value": "2"
+						},
+						{
+							"key": "amount",
+							"value": "190"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet Lists",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZDZhYjc2ZmE3MWFmMDQxMmRmMDA5YjNiNjdjNmNhNDU3NTY2NWVhYjZiNjAwMTYxYmFiMGE3ZTIyYWJmYjEwYWIwYWJlMmFkYTI2ZTU0ODYiLCJpYXQiOjE3MjY1ODg4OTkuMDE2Mzc1LCJuYmYiOjE3MjY1ODg4OTkuMDE2Mzc3LCJleHAiOjE3NTgxMjQ4OTguOTk4NDQ1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.WbhXg4OBm0hViXJwbSZoVZtBwWD4W2GlfFOaYn-9fe47M8il7vSRJKOx0RDbwvgA2Csu0uSTQaUj48xnrOFoSBIi6HhNto787HFcgRgqnWpjFj52iR_d3RzHZFZOcHhlH2M8_EAEuat_dKNe8Q3qKJULX-XZv0m-d5TofEyXlTuinNoJ41VquWjuaZVN18s38GraxxpE9u0n0PVsX_t7lPwQryKHFuKXT65NQIq2ukkB5iDU2r6sqPXpNISYpH4jv3pd84QCFha7yYAA7fVWq4msTbmRE5I3DSCQfa2rd1kbChQTZlowkR68yxKIsUW4tVwhjldLS1nxsHyvF9j_44SVSX0X7q8h1Q3cHQTlXRNIeFVlqx0qcJoZXC_7bsNNun8jzVuI4dyflI74i_hh_AntygKtGOYAV4eCy5v1WprqDmxWVGg3tldwLAPR9Q7fMBFASkqdnGcwgJ0R7ekwUTXPIXnxghap-Ez61t21zJhCBXYZ3mmGVEtek_V5f2q3vUrR-mmRvRgDPlXlkk8wIK_mZm50dycrW5WEwTTK9JtHTkYlFUECEam6Pe_1M4MvUhGISnBBfYre5fFs99HqBX3CyTdq6IV5DtssyHc0BJ7190jGjzufx0FOi-PeWMJoOIGF7g8oWBUrq4tmzJ5BvKUVmKzbFOKnkAwSQKlgO8Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/wallets",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"wallets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction By Wallet ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMmY1MGEwNTQwMjJlNjBjMDM5YjJhNjM0MjQ1MDAzZjVkZWY1MTJhNGRmMDRkMGU1ZmM3NWExYjkzNmMwYzRkOTc0OWMwOTE5OTI0MDBhY2YiLCJpYXQiOjE3MjY1OTExODUuNDc4MzE0LCJuYmYiOjE3MjY1OTExODUuNDc4MzE4LCJleHAiOjE3NTgxMjcxODUuNDY0MDYzLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.cjClsv8_7imgmCkRiG384CCpFFZpUd0LxKIBMAUzOzJemYcJvUUOLbR7Ef-vA8QIN03NhZ54voUlmpZk08b-y2TPqe8e4lGuyZRF5FQUy45OD8QFUGskSvW12hEM1KFn9Gypi7EcQ9x8GjXRR0DLPwwv-96oT4x0I3WYmafvXthGUAdtfXreU16jTln8hatmq5wfaGH7EdvL1Lio79PTaHd8CWhMdlHQfTknvMU8YL4w0ASJS32y_JIb3z5f9BIpOMSVvWvdlHq8pXubs70nNO9GOQ7haJb1yjKahEJXkJjelI-w-bN72B1mKosGDeJHVnmTjfaqyoKKpltQKCA56LKXIyWSz7BJOfVPqNV1z3q90L1ugXbMioeqmx_U4bbNvJO203RvZPv8oEkhTUs4RcpQ4eyLWH8wP8Km8m2aUo0MJHTVUMg9vxW3VyNfLHP62Z0JL6ZtgZEv-GR1FhX6QwnAXm6BozS1CCrMo_DnAJA8e-3I4L_a87vVWi_I0sZrWIQ12hOgHpkVoIRknFhU3gQrJbv6B7jBRHSlrtDToKv2QA8r0n4r5kqyoF9eBLcRZBVWVM2J8rx0woHUW3_MUbETpeNqv1tV04WZpGq1lhoH228wD7r3KwdAT1DnnPc0hrf7zNhTlLAxBIxYcgWL79G-CFA_yvQSgf_o7SbXwNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/wallets/2/transactions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"wallets",
+						"2",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Lists",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZDZhYjc2ZmE3MWFmMDQxMmRmMDA5YjNiNjdjNmNhNDU3NTY2NWVhYjZiNjAwMTYxYmFiMGE3ZTIyYWJmYjEwYWIwYWJlMmFkYTI2ZTU0ODYiLCJpYXQiOjE3MjY1ODg4OTkuMDE2Mzc1LCJuYmYiOjE3MjY1ODg4OTkuMDE2Mzc3LCJleHAiOjE3NTgxMjQ4OTguOTk4NDQ1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.WbhXg4OBm0hViXJwbSZoVZtBwWD4W2GlfFOaYn-9fe47M8il7vSRJKOx0RDbwvgA2Csu0uSTQaUj48xnrOFoSBIi6HhNto787HFcgRgqnWpjFj52iR_d3RzHZFZOcHhlH2M8_EAEuat_dKNe8Q3qKJULX-XZv0m-d5TofEyXlTuinNoJ41VquWjuaZVN18s38GraxxpE9u0n0PVsX_t7lPwQryKHFuKXT65NQIq2ukkB5iDU2r6sqPXpNISYpH4jv3pd84QCFha7yYAA7fVWq4msTbmRE5I3DSCQfa2rd1kbChQTZlowkR68yxKIsUW4tVwhjldLS1nxsHyvF9j_44SVSX0X7q8h1Q3cHQTlXRNIeFVlqx0qcJoZXC_7bsNNun8jzVuI4dyflI74i_hh_AntygKtGOYAV4eCy5v1WprqDmxWVGg3tldwLAPR9Q7fMBFASkqdnGcwgJ0R7ekwUTXPIXnxghap-Ez61t21zJhCBXYZ3mmGVEtek_V5f2q3vUrR-mmRvRgDPlXlkk8wIK_mZm50dycrW5WEwTTK9JtHTkYlFUECEam6Pe_1M4MvUhGISnBBfYre5fFs99HqBX3CyTdq6IV5DtssyHc0BJ7190jGjzufx0FOi-PeWMJoOIGF7g8oWBUrq4tmzJ5BvKUVmKzbFOKnkAwSQKlgO8Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Transactions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNTM2Mzc1MWY5NGY3ZjMxYmEyNGZjZjY2NDJmMjhhZjRlNjg0ZTdmN2U5NmQ1Mzk4ZTkzOGZiN2E2YTg5MzcwNTEyYjJkNDk2ODdkZTYwZDQiLCJpYXQiOjE3MjY1ODk2MTAuNDA3NDUzLCJuYmYiOjE3MjY1ODk2MTAuNDA3NDU3LCJleHAiOjE3NTgxMjU2MTAuMzk3OTI1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.MKkY9tgbIUEtJbL_bpZBJbEiJW9Y1ywxCkI6YH77bwLPgHGEgw5yCXQ-P2G6DMX4XaK5sw7gnJDSvBHvTLR3C0M0DUAwlEcdJvrgGClCbYdvFGz7s2K4S6VeKKQkfRykzKN1fiqvVWkM2n1NL6fkHfXzUGvpweklHruSIvq02axvnbIfl-bvi8Yzsk8ZIV3Yn_IgDjoBpuCVVJn1ebE_x9UISukbWzl76TnBw0L1TNBBm5RTMfoHwjEX7ugApChIVpalU_C-7tgyRZw3QNWfgyX8JTg2nIuLeQb-Im4vG0BjNtdWx-rQEg-GzeI6TGC4NMB8miS6C-Bkn0oKpYiRj2nV2PadC2prNrqm2DWtdykuMDnMeFCrtZgvr17CUXIzCX-JtZUMdFyHLcJmzjY8Op-eKPkkGatboQ7pzRNfpkBd0mHfiK7PmbU356dCsIYcH9Ndy6f55tQ7PwwQJJ0f7RQeDTyHVG2Rwa2QvyeT3e0whHNN7Ikln0ZwhqjUafVKuzeJ3ATTvURVA9qVcz6JVNekvyAb--KZlFIHdI-9NxQ1ZKT1GEkP0y4ZswHBidvku2D9Vyjhb_DCDAfyeqMFQofrL65bSkht5qRaMGTIGFQ8NC68SS0ZlXrqZq9-xIi3SY6y3HXarM44nOfl4zI67D8WgqMoz2iYPngTOxE0-6k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/transactions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNTM2Mzc1MWY5NGY3ZjMxYmEyNGZjZjY2NDJmMjhhZjRlNjg0ZTdmN2U5NmQ1Mzk4ZTkzOGZiN2E2YTg5MzcwNTEyYjJkNDk2ODdkZTYwZDQiLCJpYXQiOjE3MjY1ODk2MTAuNDA3NDUzLCJuYmYiOjE3MjY1ODk2MTAuNDA3NDU3LCJleHAiOjE3NTgxMjU2MTAuMzk3OTI1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.MKkY9tgbIUEtJbL_bpZBJbEiJW9Y1ywxCkI6YH77bwLPgHGEgw5yCXQ-P2G6DMX4XaK5sw7gnJDSvBHvTLR3C0M0DUAwlEcdJvrgGClCbYdvFGz7s2K4S6VeKKQkfRykzKN1fiqvVWkM2n1NL6fkHfXzUGvpweklHruSIvq02axvnbIfl-bvi8Yzsk8ZIV3Yn_IgDjoBpuCVVJn1ebE_x9UISukbWzl76TnBw0L1TNBBm5RTMfoHwjEX7ugApChIVpalU_C-7tgyRZw3QNWfgyX8JTg2nIuLeQb-Im4vG0BjNtdWx-rQEg-GzeI6TGC4NMB8miS6C-Bkn0oKpYiRj2nV2PadC2prNrqm2DWtdykuMDnMeFCrtZgvr17CUXIzCX-JtZUMdFyHLcJmzjY8Op-eKPkkGatboQ7pzRNfpkBd0mHfiK7PmbU356dCsIYcH9Ndy6f55tQ7PwwQJJ0f7RQeDTyHVG2Rwa2QvyeT3e0whHNN7Ikln0ZwhqjUafVKuzeJ3ATTvURVA9qVcz6JVNekvyAb--KZlFIHdI-9NxQ1ZKT1GEkP0y4ZswHBidvku2D9Vyjhb_DCDAfyeqMFQofrL65bSkht5qRaMGTIGFQ8NC68SS0ZlXrqZq9-xIi3SY6y3HXarM44nOfl4zI67D8WgqMoz2iYPngTOxE0-6k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/users/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Wallet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNTM2Mzc1MWY5NGY3ZjMxYmEyNGZjZjY2NDJmMjhhZjRlNjg0ZTdmN2U5NmQ1Mzk4ZTkzOGZiN2E2YTg5MzcwNTEyYjJkNDk2ODdkZTYwZDQiLCJpYXQiOjE3MjY1ODk2MTAuNDA3NDUzLCJuYmYiOjE3MjY1ODk2MTAuNDA3NDU3LCJleHAiOjE3NTgxMjU2MTAuMzk3OTI1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.MKkY9tgbIUEtJbL_bpZBJbEiJW9Y1ywxCkI6YH77bwLPgHGEgw5yCXQ-P2G6DMX4XaK5sw7gnJDSvBHvTLR3C0M0DUAwlEcdJvrgGClCbYdvFGz7s2K4S6VeKKQkfRykzKN1fiqvVWkM2n1NL6fkHfXzUGvpweklHruSIvq02axvnbIfl-bvi8Yzsk8ZIV3Yn_IgDjoBpuCVVJn1ebE_x9UISukbWzl76TnBw0L1TNBBm5RTMfoHwjEX7ugApChIVpalU_C-7tgyRZw3QNWfgyX8JTg2nIuLeQb-Im4vG0BjNtdWx-rQEg-GzeI6TGC4NMB8miS6C-Bkn0oKpYiRj2nV2PadC2prNrqm2DWtdykuMDnMeFCrtZgvr17CUXIzCX-JtZUMdFyHLcJmzjY8Op-eKPkkGatboQ7pzRNfpkBd0mHfiK7PmbU356dCsIYcH9Ndy6f55tQ7PwwQJJ0f7RQeDTyHVG2Rwa2QvyeT3e0whHNN7Ikln0ZwhqjUafVKuzeJ3ATTvURVA9qVcz6JVNekvyAb--KZlFIHdI-9NxQ1ZKT1GEkP0y4ZswHBidvku2D9Vyjhb_DCDAfyeqMFQofrL65bSkht5qRaMGTIGFQ8NC68SS0ZlXrqZq9-xIi3SY6y3HXarM44nOfl4zI67D8WgqMoz2iYPngTOxE0-6k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/wallets/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"wallets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Banned User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNTM2Mzc1MWY5NGY3ZjMxYmEyNGZjZjY2NDJmMjhhZjRlNjg0ZTdmN2U5NmQ1Mzk4ZTkzOGZiN2E2YTg5MzcwNTEyYjJkNDk2ODdkZTYwZDQiLCJpYXQiOjE3MjY1ODk2MTAuNDA3NDUzLCJuYmYiOjE3MjY1ODk2MTAuNDA3NDU3LCJleHAiOjE3NTgxMjU2MTAuMzk3OTI1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.MKkY9tgbIUEtJbL_bpZBJbEiJW9Y1ywxCkI6YH77bwLPgHGEgw5yCXQ-P2G6DMX4XaK5sw7gnJDSvBHvTLR3C0M0DUAwlEcdJvrgGClCbYdvFGz7s2K4S6VeKKQkfRykzKN1fiqvVWkM2n1NL6fkHfXzUGvpweklHruSIvq02axvnbIfl-bvi8Yzsk8ZIV3Yn_IgDjoBpuCVVJn1ebE_x9UISukbWzl76TnBw0L1TNBBm5RTMfoHwjEX7ugApChIVpalU_C-7tgyRZw3QNWfgyX8JTg2nIuLeQb-Im4vG0BjNtdWx-rQEg-GzeI6TGC4NMB8miS6C-Bkn0oKpYiRj2nV2PadC2prNrqm2DWtdykuMDnMeFCrtZgvr17CUXIzCX-JtZUMdFyHLcJmzjY8Op-eKPkkGatboQ7pzRNfpkBd0mHfiK7PmbU356dCsIYcH9Ndy6f55tQ7PwwQJJ0f7RQeDTyHVG2Rwa2QvyeT3e0whHNN7Ikln0ZwhqjUafVKuzeJ3ATTvURVA9qVcz6JVNekvyAb--KZlFIHdI-9NxQ1ZKT1GEkP0y4ZswHBidvku2D9Vyjhb_DCDAfyeqMFQofrL65bSkht5qRaMGTIGFQ8NC68SS0ZlXrqZq9-xIi3SY6y3HXarM44nOfl4zI67D8WgqMoz2iYPngTOxE0-6k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/users/2/ban",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"users",
+						"2",
+						"ban"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNTM2Mzc1MWY5NGY3ZjMxYmEyNGZjZjY2NDJmMjhhZjRlNjg0ZTdmN2U5NmQ1Mzk4ZTkzOGZiN2E2YTg5MzcwNTEyYjJkNDk2ODdkZTYwZDQiLCJpYXQiOjE3MjY1ODk2MTAuNDA3NDUzLCJuYmYiOjE3MjY1ODk2MTAuNDA3NDU3LCJleHAiOjE3NTgxMjU2MTAuMzk3OTI1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.MKkY9tgbIUEtJbL_bpZBJbEiJW9Y1ywxCkI6YH77bwLPgHGEgw5yCXQ-P2G6DMX4XaK5sw7gnJDSvBHvTLR3C0M0DUAwlEcdJvrgGClCbYdvFGz7s2K4S6VeKKQkfRykzKN1fiqvVWkM2n1NL6fkHfXzUGvpweklHruSIvq02axvnbIfl-bvi8Yzsk8ZIV3Yn_IgDjoBpuCVVJn1ebE_x9UISukbWzl76TnBw0L1TNBBm5RTMfoHwjEX7ugApChIVpalU_C-7tgyRZw3QNWfgyX8JTg2nIuLeQb-Im4vG0BjNtdWx-rQEg-GzeI6TGC4NMB8miS6C-Bkn0oKpYiRj2nV2PadC2prNrqm2DWtdykuMDnMeFCrtZgvr17CUXIzCX-JtZUMdFyHLcJmzjY8Op-eKPkkGatboQ7pzRNfpkBd0mHfiK7PmbU356dCsIYcH9Ndy6f55tQ7PwwQJJ0f7RQeDTyHVG2Rwa2QvyeT3e0whHNN7Ikln0ZwhqjUafVKuzeJ3ATTvURVA9qVcz6JVNekvyAb--KZlFIHdI-9NxQ1ZKT1GEkP0y4ZswHBidvku2D9Vyjhb_DCDAfyeqMFQofrL65bSkht5qRaMGTIGFQ8NC68SS0ZlXrqZq9-xIi3SY6y3HXarM44nOfl4zI67D8WgqMoz2iYPngTOxE0-6k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/dashboard",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
